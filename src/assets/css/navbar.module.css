@@ -1,0 +1,21 @@
+.navList:hover .navItem:not(:hover){
+    opacity: .6;
+}
+
+.navItem:is(:hover, :focus)::after {
+    width: 50%;
+}
+
+.navItem {
+    display: block;
+    transition: opacity .2s ease-in-out;
+}
+
+.navItem::after {
+    content: '';
+    display: block;
+    margin-top: .25rem;
+    border-bottom: 2px solid var(--orange);
+    width: 0;
+    transition: width .2s ease-in-out;
+}

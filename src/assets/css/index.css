@@ -1,0 +1,38 @@
+/* need the css vars in case we do custom css in rare occasions */
+:root {
+    --purple: #1B1724;
+    --purple-dark: #140F1F;
+    --purple-light: #262132;
+    --orange: #E78D01;
+    --orange-light: #EFDEC5;
+    --gray: #EBEBEB;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {  
+    .input {
+        @apply block w-full p-3 rounded-sm focus:outline-2 focus:outline-orange focus:outline
+    }
+}
+
+@layer utilities {  
+    .section-spacing {
+        @apply py-12 
+    }
+
+    .section-spacing-top {
+        @apply pt-12 
+    }
+
+    .section-spacing-bottom {
+        @apply pb-12 
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
